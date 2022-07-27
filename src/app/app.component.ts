@@ -13,5 +13,6 @@ export class AppComponent {
   pizza = {
     toppings: ['pepperoni', 'mushroom'],
     size: 'Large'
-  }
+  };
+
 }

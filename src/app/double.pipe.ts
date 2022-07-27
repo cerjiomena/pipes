@@ -1,3 +1,4 @@
+import { getLocaleDayPeriods } from '@angular/common';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,8 +6,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DoublePipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+  transform(value: number, loop: number =1, flip: boolean = false): number {
+    
+    for(let i=0; i < loop; i++) {
+      value = value * 2;
+    }
+
+    if(flip) {
+      value = value * -1;
+    }
+
+    return value;
   }
 
 }
